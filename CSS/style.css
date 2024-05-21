@@ -71,6 +71,10 @@ nav ul li a{
     border-radius: 5px;
     text-align: center;
 }
+.btn:hover{
+    background-color: #f9ae65;
+    transform: scale(1.1);
+}
 /* review carousel */
 /* scroll*/
 .scrollable{
