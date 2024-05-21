@@ -205,11 +205,11 @@ footer ul{
 footer ul a{
     margin: 0  1.25%;
     text-decoration: none;
-    color: #5D001E;
+    color: #f9ae65;
     }
 footer ul a:hover{
     text-decoration: underline;
-    color: #923754
+    color: #f9ae65;
 }
 .prev{
     left:10px;
