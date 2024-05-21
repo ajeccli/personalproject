@@ -120,20 +120,29 @@ nav a {
 /* Footer */
 footer {
     background-color: #ffffff;
-    color: #000000;
-    padding: 10px;
+    color: #5D001E;
+    /*position: fixed;*/
+    bottom:0;
+    left:0;
+    padding: 20px;
     text-align: center;
     width: 100%;
+    margin:0;
+    margin-top: auto;
     box-sizing: border-box;
-    border-color: #000000;
     border-width: 10px;
 }
-footer ul a {
-    margin: 0 1.25%;
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom:10px; /*Space between image and text*/
+}
+footer ul a{
+    margin: 0  1.25%;
     text-decoration: none;
     color: #5D001E;
-}
-footer ul a:hover {
+    }
+footer ul a:hover{
     text-decoration: underline;
-    color: #923754;
+    color: #923754
 }
