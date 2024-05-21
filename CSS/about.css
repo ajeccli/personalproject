@@ -1,99 +1,154 @@
-body{
-	font-family: Georgia, serif;
-	margin: 0;
-	padding: 0;
-	background-color: #E3E2DF;
-	color: #000;
-	padding-bottom: 100px;
+/* About CSS file */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/PoiretOne-Regular.ttf') format('truetype');
 }
-header{
-	background-color: #E3AFBC;
-	color: #5D001E;
-	padding: 20px;
-	text-align: center;
+@font-face {
+    font-family: 'CustomNameFont';
+    src: url('../fonts/Sacramento-Regular.ttf') format('truetype');
 }
-.row{
-	display: flex;
-	justify-content: space-between;
-	margin-bottom:30px;
+@font-face {
+    font-family: 'CustomIntroFont';
+    src: url(../fonts/UnicaOne-Regular.ttf) format('truetype');
 }
-.photo {
-	text-align: center;
-}
-nav{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-footer {
-	background-color: #E3AFBC;
-	color: #5D001E;
-	padding: 10px;
-	text-align: center;
-	width: 100%;
-	box-sizing: border-box;
-	border-color: #5D001E;
-	border-width: 10px;
-}
-footer ul {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 10px; 
-}
-footer ul a {
-	margin: 0 1.25%;
-	text-decoration: none;
-	color: #5D001E;
-}
-footer ul a:hover {
-	text-decoration: underline;
-	color: #923754;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
+body {
+    font-family: 'CustomFont', serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    color: #000;
+    padding-bottom: 100px; /* Add padding to make space for the footer */
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+header {
+    position: fixed;
+    z-index: 999;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px;
+    top:0;
+    width:100%;
+    box-sizing: border-box;
 }
-
-nav ul li a {
-    color: #fff;
+h1{
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 200px;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.logo{
+    margin-right: auto;
+}
+.links{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav a {
+    margin-left:20px;
     text-decoration: none;
+    color:#000000;
+}
+nav a:hover{
+    color:#923754;
+}
+.description p {
+    margin-bottom: 10px;
+    font-size: 22px; /* Adjust the font size for the description paragraphs */
+}
+.name {
+    font-family: 'CustomNameFont'; /* Apply the custom font */
+    font-size: 60px; /* Adjust the font size for the name */
+    color: #262660;
+}
+.intro{
+    font-family: 'CustomIntroFont';
+    font-weight: bold;
 }
 
+.regular-text {
+    font-family: 'CustomFont'; /* Apply the regular font */
+}
 .container {
     max-width: 800px;
-    margin: auto;
+    margin: 20px auto;
     padding: 0 20px;
 }
-.activities{
-	display:flex;
-	flex-wrap: wrap;
-	justify-content: center;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
-.activity{
-	width: 250px;
-	margin: 10px;
-	padding: 10px;
-	border: 1 px solid #ccc;
-	text-align:center;
+.photo, .description{
+    flex: 1 1 45%;
+    padding: 10px;
+    box-sizing: border-box;
 }
-.activity img{
-	width: 100%;
-	height: auto;
-	margin-bottom: 10px;
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
-
-section {
-    margin-bottom: 20px;
+.description p{
+    color:#123C69;
+}
+.description p a{
+    color: #5D001E;
+}
+.description p a:hover{
+    color:#923754;
+    text-decoration: underline;
+}
+.row:nth-child(even) .photo{
+    order: 2;
+}
+.row:nth-child(even) .description{
+    order: 1;
+}
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px; /* Space between image and text */
+}
+footer ul li{
+    margin: 0 1.25%;
+}
+footer ul a {
+    text-decoration: none;
+    color: #5D001E;
+}
+footer ul a:hover {
+    text-decoration: underline;
+    color: #923754;
+}
+@media (max-width: 768px){
+    .row{
+        flex-direction: column;
+    }
+    .row:nth-child(even){
+        flex-direction: column;
+    }
+    .photo, .description{
+        order: initial;
+        flex: 1 1 100%;
+    }
 }
