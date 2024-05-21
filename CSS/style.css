@@ -18,6 +18,8 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+nav ul li a:hover {
     color: #f9ae65;
 }
 .container{
@@ -45,6 +47,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    color:#000;
 }
 .header-text{
     color: white;
