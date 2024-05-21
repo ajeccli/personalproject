@@ -1,9 +1,13 @@
-body{
-	font-family: Georgia, serif;
-	margin: 0;
-	padding: 0;
-	background-color: #E0E2EE;
-	color: #000;
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/PoiretOne-Regular.ttf') format('truetype');
+}
+body {
+    font-family: 'CustomFont', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E2EE;
+    color: #000;
 	padding-bottom: 100px;
 }
 h/* Header */
