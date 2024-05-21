@@ -143,14 +143,12 @@ footer ul{
     display: flex;
     justify-content: center;
     margin-bottom:10px; /*Space between image and text*/
-    padding: 0;
-    list-style: none;
 }
 footer ul a{
     margin: 0  1.25%;
     text-decoration: none;
     color: #f9ae65;
-    }
+}
 footer ul a:hover{
     text-decoration: underline;
     color: #f9ae65;
