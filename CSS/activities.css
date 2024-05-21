@@ -53,7 +53,7 @@ nav a {
     color:#000000;
 }
 nav a:hover{
-    color:#923754;
+    color:#f9ae65;
 }
 .description p {
     margin-bottom: 10px;
@@ -95,7 +95,7 @@ nav a:hover{
     color: #5D001E;
 }
 .description p a:hover{
-    color:#923754;
+    color:#f9ae65;
     text-decoration: underline;
 }
 .row:nth-child(even) .photo{
@@ -131,7 +131,7 @@ footer ul a{
     }
 footer ul a:hover{
     text-decoration: underline;
-    color: #923754
+    color: #f9ae65;
 }
 @media (max-width: 768px){
     .row{
