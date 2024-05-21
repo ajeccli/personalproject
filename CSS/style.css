@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('../fonts/PoiretOne-Regular.ttf') format('truetype');
+    src: url('../fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
 }
 body {
     font-family: 'CustomFont', serif;
