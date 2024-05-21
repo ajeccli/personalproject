@@ -7,7 +7,7 @@ body {
     font-family: 'CustomFont', serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f7eeec;
     box-sizing: border-box;
 }
 *, *::before, *::after {
@@ -16,7 +16,7 @@ body {
 header {
     position: fixed;
     z-index: 999;
-    background-color: #ffffff;
+    background-color: #f7eeec;
     color: #000000;
     padding: 50px;
     top: 0;
@@ -119,7 +119,7 @@ nav a {
 }
 /* Footer */
 footer {
-    background-color: #ffffff;
+    background-color: #f7eeec;
     color: #5D001E;
     /*position: fixed;*/
     bottom:0;
