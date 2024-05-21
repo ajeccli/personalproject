@@ -50,6 +50,13 @@ nav a {
     text-decoration: none;
     color: #000000;
 }
+nav a:hover{
+    color:#f9ae65;
+}
+.description p a:hover{
+    color:#f9ae65;
+    text-decoration: underline;
+}
 .container {
     max-width: 96%;
     margin: 20px auto;
