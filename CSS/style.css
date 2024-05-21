@@ -228,11 +228,11 @@ nav ul li.dropdown {
 }
 
 nav ul li.dropdown .dropdown-content {
-    display: none;
+    display: none; /* Ensure dropdown is hidden by default */
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 12px 16px;
     border-radius: 5px;
@@ -255,5 +255,5 @@ nav ul li.dropdown .dropdown-content a:hover {
 }
 
 nav ul li.dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Show dropdown on hover */
 }
