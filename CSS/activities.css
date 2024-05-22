@@ -33,20 +33,26 @@ h1{
     color: #3c6d79;
 }
 nav{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    /*padding: 0 50px;*/
 }
 .logo{
     margin-right: auto;
 }
-/*.links{
-    display:flex;
+.links{
+
+    display: flex; /* Change to flex to lay out the links horizontally */
     justify-content: flex-end;
-    margin-right: 20px;
-}*/
+    align-items: center;
+
+    /*display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;*/
+}
 nav a {
     margin-left:20px;
     text-decoration: none;
