@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Map with Leaflet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view
+        var map = L.map('map').setView([20, 0], 2);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Define GeoJSON data for countries and US states
+        var geojsonFeature = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "United States",
+                        "marked": true,
+                        "type": "country"
+                    },
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [-125.00165, 24.9493],
+                                [-66.9326, 24.9493],
+                                [-66.9326, 49.5904],
+                                [-125.00165, 49.5904],
+                                [-125.00165, 24.9493]
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "California",
+                        "marked": false,
+                        "type": "state"
+                    },
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [-124.409591, 32.534156],
+                                [-114.131211, 32.534156],
+                                [-114.131211, 42.009518],
+                                [-124.409591, 42.009518],
+                                [-124.409591, 32.534156]
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Brazil",
+                        "marked": false,
+                        "type": "country"
+                    },
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [-73.987235, -33.768377],
+                                [-34.791159, -33.768377],
+                                [-34.791159, 5.271391],
+                                [-73.987235, 5.271391],
+                                [-73.987235, -33.768377]
+                            ]
+                        ]
+                    }
+                }
+            ]
+        };
+
+        // Add GeoJSON layer to the map
+        L.geoJSON(geojsonFeature, {
+            style: function(feature) {
+                return {
+                    color: feature.properties.marked ? 'red' : 'blue',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                };
+            },
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.name);
+            }
+        }).addTo(map);
+    </script>
+</body>
+</html>
