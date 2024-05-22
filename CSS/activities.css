@@ -42,11 +42,11 @@ nav{
 .logo{
     margin-right: auto;
 }
-.links{
+/*.links{
     display:flex;
     justify-content: flex-end;
     margin-right: 20px;
-}
+}*/
 nav a {
     margin-left:20px;
     text-decoration: none;
