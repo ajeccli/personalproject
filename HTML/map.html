@@ -16,99 +16,20 @@
 </head>
 <body>
     <div id="map"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map and set its view
-        var map = L.map('map').setView([20, 0], 2);
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Define GeoJSON data for countries and US states
-        var geojsonFeature = {
-            "type": "FeatureCollection",
-            "features": [
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "United States",
-                        "marked": true,
-                        "type": "country"
-                    },
-                    "geometry": {
-                        "type": "Polygon",
-                        "coordinates": [
-                            [
-                                [-125.00165, 24.9493],
-                                [-66.9326, 24.9493],
-                                [-66.9326, 49.5904],
-                                [-125.00165, 49.5904],
-                                [-125.00165, 24.9493]
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "California",
-                        "marked": false,
-                        "type": "state"
-                    },
-                    "geometry": {
-                        "type": "Polygon",
-                        "coordinates": [
-                            [
-                                [-124.409591, 32.534156],
-                                [-114.131211, 32.534156],
-                                [-114.131211, 42.009518],
-                                [-124.409591, 42.009518],
-                                [-124.409591, 32.534156]
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "Brazil",
-                        "marked": false,
-                        "type": "country"
-                    },
-                    "geometry": {
-                        "type": "Polygon",
-                        "coordinates": [
-                            [
-                                [-73.987235, -33.768377],
-                                [-34.791159, -33.768377],
-                                [-34.791159, 5.271391],
-                                [-73.987235, 5.271391],
-                                [-73.987235, -33.768377]
-                            ]
-                        ]
-                    }
-                }
-            ]
-        };
-
-        // Add GeoJSON layer to the map
-        L.geoJSON(geojsonFeature, {
-            style: function(feature) {
-                return {
-                    fill: false,
-                    color: feature.properties.marked ? 'red' : 'blue',
-                    weight: 2
-                };
-            },
-            onEachFeature: function (feature, layer) {
-                layer.bindPopup(feature.properties.name);
-            }
-        }).addTo(map);
-        // Set maximum and minimum zoom levels
-        map.setMaxZoom(10); // Adjust the max zoom level as needed
-        map.setMinZoom(2); // Adjust the min zoom level as needed
-    </script>
+        <footer>
+            <nav>
+                <div class="footerlinks">
+                    <a href="../homepage/index.html">HOME</a>
+                    <a href="../location/location.html">LOCATIONS</a>
+                    <a href="../review/review.html">REVIEWS</a>
+                    <a href="../about/about.html">ABOUT</a>
+                    <a href="../contact/contact.html">CONTACT US</a>
+                </div>
+            </nav>
+            <p><a href="../homepage/index.html"><img src="../../img/mahi3.jpeg" width="30" height="auto" alt="logo"></a></p>
+            <p>© 2024 Bite Into Seattle. All Rights Reserved.</p>
+        </footer>
 </body>
 </html>
