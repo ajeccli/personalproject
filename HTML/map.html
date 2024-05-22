@@ -1,45 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>World Map with Leaflet</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/location.css"/>
-    <link rel="stylesheet" href="../../CSS/map.css">
-    <script src="../JavaScript/map.js" defer></script>
+    <title>World Map with Plotly</title>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <p><a href="../homepage/index.html"><img src="../img/logo.jpg" width="70" height="auto" alt="logo"></a></p>
-            </div>
-            <div class="links">
-                <a href="../HTML/index.html">HOME</a>
-                <a href="../HTML/location.html">LOCATIONS</a>
-                <a href="../HTML/about.html">ABOUT</a>
-                <a href="../HTML/activities.html">ACTIVITIES</a>
-                <a href="../HTML/map.html">MAP</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1> MAP </h1>
-        <div id="map"></div>
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    </main>
-        <footer>
-            <nav>
-                <div class="footerlinks">
-                    <a href="../homepage/index.html">HOME</a>
-                    <a href="../location/location.html">LOCATIONS</a>
-                    <a href="../review/review.html">REVIEWS</a>
-                    <a href="../about/about.html">ABOUT</a>
-                    <a href="../contact/contact.html">CONTACT US</a>
-                </div>
-            </nav>
-            <p><a href="../homepage/index.html"><img src="../img/logo.jpg" width="30" height="auto" alt="logo"></a></p>
-            <p>© 2024 Adela's Travel Blog. All Rights Reserved.</p>
-        </footer>
+    <!-- Container for the plot -->
+    <div id="map" style="width: 100%; height: 600px;"></div>
+
+    <!-- JavaScript code to create the map -->
+    <script>
+        // Prepare the data
+        const data = [
+            {
+                type: 'scattergeo',
+                mode: 'markers',
+                text: ['Point 1', 'Point 2', 'Point 3'], // Labels for each point
+                lon: [10.0, -74.0, 139.0], // Longitudes
+                lat: [45.0, 40.0, 35.0],   // Latitudes
+                marker: {
+                    size: 10,
+                    color: 'red'
+                }
+            }
+        ];
+
+        // Define the layout
+        const layout = {
+            title: 'World Map with Plotly',
+            geo: {
+                projection: {
+                    type: 'natural earth'
+                },
+                showland: true,
+                landcolor: 'rgb(217, 217, 217)',
+                subunitwidth: 1,
+                countrywidth: 1,
+                subunitcolor: 'rgb(255,255,255)',
+                countrycolor: 'rgb(255,255,255)'
+            }
+        };
+
+        // Create the plot
+        Plotly.newPlot('map', data, layout);
+    </script>
 </body>
 </html>
