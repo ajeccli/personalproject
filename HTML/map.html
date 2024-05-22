@@ -104,6 +104,9 @@
                 layer.bindPopup(feature.properties.name);
             }
         }).addTo(map);
+        // Set maximum and minimum zoom levels
+        map.setMaxZoom(10); // Adjust the max zoom level as needed
+        map.setMinZoom(2); // Adjust the min zoom level as needed
     </script>
 </body>
 </html>
