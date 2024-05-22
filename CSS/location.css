@@ -9,6 +9,7 @@ body {
     padding: 0;
     background-color: #E0E2EE;
     box-sizing: border-box;
+    padding-top: 50px; 
 }
 *, *::before, *::after {
     box-sizing: inherit;
