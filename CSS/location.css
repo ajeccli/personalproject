@@ -62,7 +62,7 @@ nav a:hover{
     max-width: 96%;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Change from 3 to 2 columns */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
 .review {
